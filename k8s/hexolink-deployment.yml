@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hexolink-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: hexolink
+  template:
+    metadata:
+      labels:
+        component: hexolink
+    spec:
+      containers:
+        - name: hexolink
+          image: noxior/hexolink
+          ports:
+            - containerPort: 6001
+          env:
+            - name: RABBITMQ_HOST
+              value: rabbitmq-cluster-ip-service
+            - name: RABBITMQ_PORT
+              value: '61613'
+            - name: REDIS_PORT
+              value: '6379'
+            - name: AUTH_SERVICE_HOST
+              value: auth-service-cluster-ip-service
+            - name: AUTH_SERVICE_PORT
+              value: '3001'
+#            - name: PGUSER
+#              value: postgres
+#            - name: PGHOST
+#              value: postgres-cluster-ip-service
+#            - name: PGPORT
+#              value: '5432'
+#            - name: PGDATABASE
+#              value: postgres
+#            - name: POSTGRES_PASSWORD
+#              valueFrom:
+#                secretKeyRef:
+#                  name: pgpassword
+#                  key: POSTGRES_PASSWORD
+

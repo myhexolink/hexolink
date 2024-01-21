@@ -1,0 +1,26 @@
+server:
+  port: 6001
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
+    open-in-view: false
+  datasource:
+    url: jdbc:postgresql://176.108.2.57:5432/postgres
+    username: postgres
+    password: q987654321
+
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://176.108.2.57:3001/user-profile
+
+host: authentication-service
+
+logging:
+  level:
+    sql: debug
+    root: debug
+    web: debug

@@ -1,0 +1,22 @@
+server:
+  port: 3001
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
+    open-in-view: false
+  datasource:
+    url: jdbc:postgresql://176.108.2.57:5432/postgres
+    username: postgres
+    password: q987654321
+firebase:
+  service-account-path: hexolink-4a945-firebase-adminsdk-su0yq-f72dc6eed1.json
+
+logging:
+  level:
+    sql: debug
+    root: debug
+    web: debug
+
