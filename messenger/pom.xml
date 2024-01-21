@@ -15,12 +15,6 @@
 
     <name>messenger</name>
 
-    <properties>
-        <java.version>17</java.version>
-        <spring-cloud-gcp.version>2.0.11</spring-cloud-gcp.version>
-        <spring-cloud.version>2020.0.6</spring-cloud.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
