@@ -20,7 +20,7 @@ before_install:
   - gcloud config set compute/zone europe-central2
   - gcloud container clusters get-credentials hexolink
 script:
-  - mvn clean package -X
+  - mvn clean package
 
 #для сборки самого проекта, каждый сервис собирается
 #по отдельности, для пуша на докер хаб
