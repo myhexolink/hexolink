@@ -31,7 +31,7 @@
     <modules>
         <!--<module>config</module>-->
         <!--        <module>registry</module>-->
-        <module>messenger-service</module>
+        <module>messenger</module>
         <module>auth-service</module>
         <!--        <module>chat</module>-->
         <!--        <module>Auth</module>-->
