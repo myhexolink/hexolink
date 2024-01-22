@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hexolink-deployment
+  name: messenger-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      component: hexolink
+      component: messenger
   template:
     metadata:
       labels:
-        component: hexolink
+        component: messenger
     spec:
       containers:
-        - name: hexolink
-          image: noxior/hexolink
+        - name: messenger
+          image: noxior/messenger
           ports:
             - containerPort: 6001
           env:
@@ -24,10 +24,10 @@ spec:
               value: '61613'
             - name: REDIS_PORT
               value: '6379'
-            - name: AUTH_SERVICE_HOST
-              value: auth-service-cluster-ip-service
-            - name: AUTH_SERVICE_PORT
-              value: '3001'
+#            - name: AUTH_SERVICE_HOST
+#              value: auth-service-cluster-ip-service
+#            - name: AUTH_SERVICE_PORT
+#              value: '3001'
 #            - name: PGUSER
 #              value: postgres
 #            - name: PGHOST
