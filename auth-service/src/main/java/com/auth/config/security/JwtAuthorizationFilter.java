@@ -63,7 +63,7 @@ public class JwtAuthorizationFilter extends BasicAuthenticationFilter {
                         user, null, Collections.singleton(USER)
                 );
             } else {
-                throw new AuthorizationServiceException("fsdfsd11");
+                throw new AuthorizationServiceException("error");
             }
         } catch (Exception e) {
             throw new AuthorizationServiceException("fsdfsd");
