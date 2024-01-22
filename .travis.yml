@@ -17,7 +17,7 @@ before_install:
   - gcloud components update kubectl
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project hexolink-4a945
-  - gcloud config set compute/zone europe-central2
+  - gcloud config set compute/zone europe-central2-a
   - gcloud container clusters get-credentials hexolink
 script:
   - mvn clean package

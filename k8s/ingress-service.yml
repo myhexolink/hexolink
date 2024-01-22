@@ -28,7 +28,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: hexolink-cluster-ip-service
+                name: messenger-cluster-ip-service
                 port:
                   number: 6001
     - host: www.hexolink.xyz
@@ -45,6 +45,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: hexolink-cluster-ip-service
+                name: messenger-cluster-ip-service
                 port:
                   number: 6001
