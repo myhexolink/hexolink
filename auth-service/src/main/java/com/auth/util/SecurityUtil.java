@@ -48,6 +48,7 @@ public class SecurityUtil {
                         tokenRepository.getByToken(token),
                         JwtModel.class
                 );
+
         return new SecretKeySpec(
                 storedToken.getSecretKey(),
                 0,
