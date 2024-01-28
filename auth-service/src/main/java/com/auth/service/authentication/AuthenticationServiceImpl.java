@@ -43,17 +43,17 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
     public String authenticate(String firebaseToken) {
         FirebaseToken decodedToken;
-        try {
-            decodedToken = firebaseAuth.verifyIdToken(AuthUtil.getTokenFromRequest(firebaseToken));
-        } catch (FirebaseAuthException e) {
-            throw new GoogleAuthenticationException();
-        }
-        Map<String, String> firebase = (Map<String, String>) decodedToken.getClaims().get("firebase");
-        String signInProvider = firebase.get(SIGN_IN_PROVIDER_CONSTANT);
+//        try {
+//            decodedToken = firebaseAuth.verifyIdToken(AuthUtil.getTokenFromRequest(firebaseToken));
+//        } catch (FirebaseAuthException e) {
+//            throw new GoogleAuthenticationException();
+//        }
+//        Map<String, String> firebase = (Map<String, String>) decodedToken.getClaims().get("firebase");
+//        String signInProvider = firebase.get(SIGN_IN_PROVIDER_CONSTANT);
         GoogleUserTo googleUserTo = new GoogleUserTo();
-        googleUserTo.setName(decodedToken.getName());
-        googleUserTo.setEmail(decodedToken.getEmail());
-        googleUserTo.setSignInProvider(signInProvider);
+        googleUserTo.setName("ffff asfsd");
+        googleUserTo.setEmail("alexsafsafsd@gmail.com");
+        googleUserTo.setSignInProvider("signInProvider");
         SecretKey secureKey = null;
         try {
             secureKey = securityUtil.getSecureKey();
@@ -66,7 +66,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
                     googleUserTo,
                     Collections.singleton(USER)
             );
-            newFromTo.setAvatar(getAvatarFile(decodedToken.getPicture()));
+            newFromTo.setAvatar(null);
             user = userService.create(newFromTo);
         }
 

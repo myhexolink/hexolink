@@ -33,7 +33,7 @@ public class UserConverter {
         user.setUpdated(LocalDateTime.now());
         user.setColor(userTo.getColor());
         user.setRoles(user.getRoles());
-        user.setAvatar(userTo.getAvatarFile());
+        user.setAvatar(userTo.getAvatar());
         return user;
     }
 }

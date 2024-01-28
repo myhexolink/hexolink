@@ -62,7 +62,7 @@ public class WebSocketEvents {
     @EventListener
     public void handleSessionSubscribed(SessionSubscribeEvent event) {
 //        SimpMessageHeaderAccessor headers = SimpMessageHeaderAccessor.wrap(event.getMessage());
-//        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 //        System.out.println(event.getMessage().getHeaders());
 //        Integer id = ((OAuthUser) ((UsernamePasswordAuthenticationToken) ((OAuth2Authentication) headers.getUser()).getUserAuthentication()).getPrincipal()).getId();
 //        event.getMessage().getHeaders().put("simpUser", id);

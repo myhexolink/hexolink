@@ -35,7 +35,7 @@ public class CustomPrincipalExtractor implements PrincipalExtractor {
                 bio,
                 birthDate,
                 gender,
-                Base64.getDecoder().decode(avatar1)
+                avatar1 == null ? null : Base64.getDecoder().decode(avatar1)
         );
     }
 }

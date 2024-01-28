@@ -46,6 +46,6 @@ public class UserTo {
             message = "gender must be male or female")
     private String gender;
 
-    @JsonProperty("avatar_file")
-    private byte[] avatarFile;
+    @JsonProperty("avatar")
+    private byte[] avatar;
 }
