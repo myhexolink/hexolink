@@ -11,14 +11,14 @@ metadata:
 spec:
   tls:
     - hosts:
-        - hexolink.lat
-        - www.hexolink.lat
-      secretName: hexolink-lat
+        - hexolink.xyz
+        - www.hexolink.xyz
+      secretName: hexolink-xyz
   rules:
-    - host: hexolink.lat
+    - host: hexolink.xyz
       http:
         paths:
-          - path: /?(.*)
+          - path: /auth/?(.*)
             pathType: Prefix
             backend:
               service:
@@ -32,10 +32,10 @@ spec:
                 name: messenger-cluster-ip-service
                 port:
                   number: 6001
-    - host: www.hexolink.lat
+    - host: www.hexolink.xyz
       http:
         paths:
-          - path: /?(.*)
+          - path: /auth/?(.*)
             pathType: Prefix
             backend:
               service:
