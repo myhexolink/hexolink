@@ -13,7 +13,6 @@ spring:
     password: q987654321
 firebase:
   service-account-path: hexolink-4a945-firebase-adminsdk-su0yq-f72dc6eed1.json
-
 logging:
   level:
     sql: debug
