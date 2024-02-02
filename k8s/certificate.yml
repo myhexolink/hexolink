@@ -3,7 +3,7 @@ kind: Certificate
 metadata:
   name: hexolink-lat-tls
 spec:
-  secretName: hexolink-lat
+  secretName: hexolink-xyz
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
