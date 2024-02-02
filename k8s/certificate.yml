@@ -3,11 +3,11 @@ kind: Certificate
 metadata:
   name: hexolink-lat-tls
 spec:
-  secretName: hexolink-xyz
+  secretName: hexolink-lat
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
-  commonName: hexolink.xyz
+  commonName: hexolink.lat
   dnsNames:
-    - hexolink.xyz
-    - www.hexolink.xyz
+    - hexolink.lat
+    - www.hexolink.lat
