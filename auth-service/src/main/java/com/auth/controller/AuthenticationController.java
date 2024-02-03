@@ -19,6 +19,7 @@ public class AuthenticationController {
 
     private final AuthenticationService authenticationService;
 
+    @CrossOrigin(origins = "https://www.hexolink.xyz")
     @PostMapping
     public ResponseEntity authentication(
             @RequestHeader(AUTHORIZATION_HEADER_NAME) @NotNull String authorizationToken
