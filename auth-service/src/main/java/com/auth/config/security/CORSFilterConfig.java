@@ -17,6 +17,7 @@ public class CORSFilterConfig {
         config.addAllowedOrigin("https://www.hexolink.xyz");
         config.addAllowedMethod("*");
         config.addAllowedHeader("*");
+        config.addExposedHeader("*");
         source.registerCorsConfiguration("/**", config);
         return new CorsFilter(source);
     }
