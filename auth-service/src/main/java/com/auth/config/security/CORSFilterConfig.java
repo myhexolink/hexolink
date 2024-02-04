@@ -15,8 +15,8 @@ public class CORSFilterConfig {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
         config.addAllowedOrigin("https://www.hexolink.xyz");
-        config.addAllowedMethod("Authorization");
-        config.addAllowedHeader("Authorization");
+        config.addAllowedMethod("*");
+        config.addAllowedHeader("*");
         source.registerCorsConfiguration("/**", config);
         return new CorsFilter(source);
     }
