@@ -13,8 +13,8 @@ public class CorsConfig implements WebMvcConfigurer {
                 .allowedOrigins("https://www.hexolink.xyz")
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowCredentials(true)
-                .exposedHeaders("*")
-                .allowedHeaders("*")
+                .exposedHeaders("Authorization")
+                .allowedHeaders("Authorization")
                 .maxAge(3600);
     }
 }
