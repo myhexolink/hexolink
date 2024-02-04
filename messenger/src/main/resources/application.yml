@@ -17,7 +17,7 @@ spring:
 security:
   oauth2:
     resource:
-      user-info-uri: http://176.108.2.57:3001/user-profile
+      user-info-uri: https://hexolink.lat/user-profile
 
 host: authentication-service
 

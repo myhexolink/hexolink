@@ -36,7 +36,7 @@ public class UserEventService implements AbstractEventDispatcher<EventUpdateUser
     ResponseEntity<Object> updateUserRestService(UserTo updatedFields, String authorizationHeader) {
         HttpEntity<Object> entity = new HttpEntity<>(updatedFields, buildHeader(authorizationHeader));
         return new RestTemplate()
-                .exchange("http://localhost:3001/user-profile", HttpMethod.PUT, entity, Object.class);
+                .exchange("https://hexolink.lat/user-profile", HttpMethod.PUT, entity, Object.class);
     }
 
     private HttpHeaders buildHeader(String authorizationHeader) {
