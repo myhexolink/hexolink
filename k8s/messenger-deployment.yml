@@ -17,13 +17,13 @@ spec:
           image: noxior/messenger
           ports:
             - containerPort: 6001
-          env:
-            - name: RABBITMQ_HOST
-              value: rabbitmq-cluster-ip-service
-            - name: RABBITMQ_PORT
-              value: '61613'
-            - name: REDIS_PORT
-              value: '6379'
+#          env:
+#            - name: RABBITMQ_HOST
+#              value: rabbitmq-cluster-ip-service
+#            - name: RABBITMQ_PORT
+#              value: '61613'
+#            - name: REDIS_PORT
+#              value: '6379'
 #            - name: AUTH_SERVICE_HOST
 #              value: auth-service-cluster-ip-service
 #            - name: AUTH_SERVICE_PORT

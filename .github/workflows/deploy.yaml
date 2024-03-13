@@ -16,6 +16,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.11
+          
       - name: Maven Package
         run: mvn -B clean package -DskipTests 
         
@@ -41,6 +42,7 @@ jobs:
 
       - name: Build
         run: |-
+          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
           docker build -t noxior/auth-service:latest -t noxior/auth-service:${{ env.SHA }} -f ./auth-service/Dockerfile ./auth-service
           docker build -t noxior/messenger:latest -t noxior/messenger:${{ env.SHA }} -f ./messenger/Dockerfile ./messenger
 
