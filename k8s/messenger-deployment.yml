@@ -1,4 +1,5 @@
 apiVersion: apps/v1
+
 kind: Deployment
 metadata:
   name: messenger-deployment
@@ -40,5 +41,5 @@ spec:
 #              valueFrom:
 #                secretKeyRef:
 #                  name: pgpassword
-#                  key: POSTGRES_PASSWORD
+
 

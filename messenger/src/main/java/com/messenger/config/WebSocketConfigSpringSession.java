@@ -18,7 +18,7 @@ import java.util.regex.Pattern;
 @EnableWebSocketMessageBroker
 class WebSocketConfigSpringSession implements WebSocketMessageBrokerConfigurer {
 
-    private final String relayHost = "176.108.2.57";
+    private final String relayHost = "172.20.10.4";
     private final Integer relayPort = 61613;
 
     @Override

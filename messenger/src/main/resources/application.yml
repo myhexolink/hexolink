@@ -10,7 +10,7 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQL94Dialect
     open-in-view: false
   datasource:
-    url: jdbc:postgresql://176.108.2.57:5432/postgres
+    url: jdbc:postgresql://172.20.10.4:5432/postgres
     username: postgres
     password: q987654321
 
