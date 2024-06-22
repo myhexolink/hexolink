@@ -27,6 +27,5 @@ jobs:
           docker push ${{ secrets.OCI_REGION }}.ocir.io/${{ secrets.OCI_TENANCY_NAMESPACE }}/messenger:latest
           kubectl apply -f k8s
 
-
       - name: Log out from Docker
         run: docker logout ${{ secrets.OCI_REGION }}.ocir.io
