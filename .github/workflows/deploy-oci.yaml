@@ -3,7 +3,7 @@ name: Build and Push Docker Image
 on:
   push:
     branches:
-      - main  # Измените на ветку, которую вы хотите отслеживать
+      - master  # Измените на ветку, которую вы хотите отслеживать
 
 jobs:
   build-and-push:
