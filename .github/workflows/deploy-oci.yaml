@@ -21,6 +21,7 @@ jobs:
         id: login-ocir
         with:
           auth_token: ${{ secrets.OCI_AUTH_TOKEN }}
+          RegionId: 'Italy Northwest (Milan)'
 
       - name: Build and push Docker image
         run: |
